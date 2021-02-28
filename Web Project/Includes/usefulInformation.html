@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Useful Information</title>
+    <!--making a responsive webpage-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--linking stylesheet-->
+    <link href="../CSS/usefulInformation.css" type="text/css" rel="stylesheet">
+    <!--linking bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!--jQuery import-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--link Javascript-->
+    <script src="../Javascript/usefulInformation.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container wrapper">
+            <div class="row align-items-start">
+
+                <header> <!--loaded nav from homepage--></header>
+
+                <!--BMI Calculator-->
+                <section class="section col-12 col-sm-12">
+                    <div id="bmi" class="row align-items-start">
+                        <article>
+                            <h2>BMI Calculator</h2>
+                            <p>Body mass index (BMI) is a value derived from the mass (weight) and height of a person.
+                                The BMI is defined as the body mass divided by the square of the body height, and is
+                                universally
+                                expressed in units of kg/m2, resulting from mass in kilograms and height in metres.
+                            </p>
+                            <p>The BMI is a convenient rule of thumb used to broadly categorize a person as underweight,
+                                weight, overweight, or obese based on tissue mass (muscle, fat, and bone) and height.
+                                Commonly accepted BMI ranges are underweight (under 18.5 kg/m2), normal weight (18.5 to
+                                25),
+                                overweight (25 to 30), and obese (over 30).</p>
+                        </article>
+                        <article>
+                            <form name="bmiForm" id="bmiForm" class="calculator col-6" onsubmit="return calculateBmi()">
+                                <div class="row g-3 align-items-center">
+                                    <div class="col-4">
+                                        <label for="height" class="form-label">Height(cm)</label>
+                                        <input type="text" class="form-control" id="height" name="height">
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="weight" class="form-label">Weight(kg)</label>
+                                        <input type="text" class="form-control" id="weight" name="weight">
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Calculate BMI</button>
+                                </div>
+                            </form>
+                            <form name="bmiResults" id="bmiResults" class="row col-5 .d-sm-none .d-md-block"
+                                  onreset="resetBmi()">
+                                <div class="row ">
+                                    <label for="yourBmi" class="col-4 col-form-label g-1">Your BMI</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" id="yourBmi" name="yourBmi">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="thisMeans" class="col-4 col-form-label">This Means</label>
+                                    <div class="col-sm-8">
+                                        <input type="text" class="form-control" id="thisMeans" name="thisMeans">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="reset" class="btn btn-primary">Reset</button>
+                                </div>
+                            </form>
+                        </article>
+                    </div>
+                </section>
+
+                <!--Protein Intake-->
+                <section class="section col-12 col-sm-12">
+                    <div id="protein" class="row align-items-start">
+                        <h2>Protein</h2>
+                        <p>It's important that we eat enough protein each day to cover our body's needs.
+                            Protein helps your body to maintain a proper fluid balance, builds and repairs tissues,
+                            transports nutrients, and provides other essential functions.</p>
+
+                        <!--Protein Sources-->
+                        <article class="sourcesOfProtein">
+                            <h3>Good sources of Protein</h3>
+                            <div class="row g-2 align-items-center">
+                                <div class="col-6">
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <th scope="col">Food</th>
+                                            <th scope="col">Protein (grams)</th>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">85 grams tuna, salmon, haddock, or trout</td>
+                                            <td scope="row">21</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">85 grams cooked turkey or chicken</td>
+                                            <td scope="row">19</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">170 grams plain Greek yogurt</td>
+                                            <td scope="row">17</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">½ cup cottage cheese</td>
+                                            <td scope="row">14</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">½ cup cooked beans</td>
+                                            <td scope="row">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">1 cup of milk</td>
+                                            <td scope="row">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">1 cup cooked pasta</td>
+                                            <td scope="row">8</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">¼ cup or 28 grams of nuts (all types)</td>
+                                            <td scope="row">7</td>
+                                        </tr>
+                                        <tr>
+                                            <td scope="row">1 egg</td>
+                                            <td scope="row">6</td>
+                                        </tr>
+                                    </table>
+                                    <p class="italic smallFont">Source:<a href="https://fdc.nal.usda.gov/">USDA
+                                        National
+                                        Nutrient Database</a>, 2015</p>
+                                </div>
+                                <img src="../Resources/Images/protein.jpg" alt="protein">
+                            </div>
+                        </article>
+
+                        <!--Protein Intake Calculator-->
+                        <article class="proteinCalculator">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3>Protein Intake Calculator</h3>
+                                    <form name="proteinForm" id="proteinForm" class="calculator col-5"
+                                          onsubmit="return calculateProtein()" onreset="resetProtein()">
+                                        <div class="row g-3 align-items-center">
+                                            <div class="row">
+                                                <div class="col-4">
+                                                    <p>Gender</p>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="gender"
+                                                               id="male" onclick="disablePregnant()" required>
+                                                        <label class="form-check-label" for="male">Male</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="gender"
+                                                               id="female" onclick="enablePregnant()">
+                                                        <label class="form-check-label" for="female">Female</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-1">
+                                                <div class="col-4">
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="pregnant"
+                                                               value="pregnant" disabled="true">
+                                                        <label class="form-check-label" for="pregnant">I am
+                                                            Pregnant</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="checkbox" id="lactating"
+                                                               value="lactating" disabled="true">
+                                                        <label class="form-check-label" for="lactating">I am
+                                                            Lactating</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-2">
+                                                <div class="col-4">
+                                                    <label for="pHeight" class="form-label">Height(cm)</label>
+                                                    <input type="text" class="form-control" id="pHeight" required>
+                                                </div>
+                                                <div class="col-4">
+                                                    <label for="pWeight" class="form-label">Weight(kg)</label>
+                                                    <input type="text" class="form-control" id="pWeight" required>
+                                                </div>
+                                            </div>
+                                            <div class="row g-2 activityLevel">
+                                                <div class="col-4">
+                                                    <p>What is your activity level?</p>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="activeLevel"
+                                                               id="sedentary" required>
+                                                        <label class="form-check-label"
+                                                               for="sedentary">Sedentary</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="activeLevel"
+                                                               id="active">
+                                                        <label class="form-check-label" for="active">Active</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row g-2">
+                                                <div class="col-6">
+                                                    <p>What is your goal?</p>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="goal"
+                                                               id="maintenance" required>
+                                                        <label class="form-check-label" for="maintenance">Weight
+                                                            Maintenance</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="goal"
+                                                               id="muscleGain">
+                                                        <label class="form-check-label" for="muscleGain">Muscle
+                                                            gain</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="goal"
+                                                               id="fatLoss">
+                                                        <label class="form-check-label" for="fatLoss">Fat Loss</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-8">
+                                            <button type="submit" class="btn btn-primary">Calculate Protein Intake
+                                            </button>
+                                        </div>
+                                        <br>
+                                        <div class="col-8">
+                                            <button type="reset" class="btn btn-primary">Reset</button>
+                                        </div>
+                                        <p class="italic smallFont"><br>Source: <a
+                                                href="https://examine.com/guides/protein-intake/" target="_blank">Optimal
+                                            Protein Intake Guide</a></p>
+                                    </form>
+
+                                    <!-- results of Protein intake calculator-->
+                                    <div class="row" id="proteinResults">
+                                        <div id="proteinResultsBg">
+                                            <div class="col-10">
+                                                <img id="proteinResultsImg" src="../Resources/Images/protein-round.png"
+                                                     alt="proteins-round">
+                                                <h4 id="resultsHeader"><!--protein intake calculator results--></h4>
+                                                <p id="resultsGender"><!--protein intake calculator results--></p>
+                                                <div class="row">
+                                                    <p id="resultsWeightHeight" class="col-3">
+                                                        <!--protein intake calculator results--></p>
+                                                    <p id="resultsPregnant" class="col-4">
+                                                        <!--protein intake calculator results--></p>
+                                                </div>
+                                                <div class="row">
+                                                    <p id="resultsActivity" class="col-4">
+                                                        <!--protein intake calculator results--></p>
+                                                    <p id="resultsGoal" class="col-6">
+                                                        <!--protein intake calculator results--></p>
+                                                </div>
+                                                <p id="proteinResultsP"><!--protein intake calculator results--></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="section col-12 col-sm-12">
+                    <div class="row align-items-start">
+                        <h2>Water Intake Calculator</h2>
+                        <article id="water">
+                            <div id="waterCalculator" class="col-6">
+                                <form name="waterForm" id="waterForm" class="calculator" onsubmit="return calculateWater()">
+                                    <div class="row g-2">
+                                        <div class="col-4">
+                                            <label for="wWeight" class="form-label">Weight(kg)</label>
+                                            <input type="text" class="form-control" id="wWeight" name="wWeight" required>
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="wActivity" class="form-label">Daily workout time(min)</label>
+                                            <input type="number" class="form-control" id="wActivity" min="0" name="wActivity" required>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row g-2">
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-primary">Calculate Water Intake
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="col-8">
+                                        <div class="mb-3">
+                                            <label for="wResult" class="form-label">Your suggested daily water
+                                                intake:</label>
+                                            <input type="text" class="form-control" id="wResult" name="wResult">
+                                            <br>
+                                            <button type="reset" class="btn btn-primary">Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <row>
+                                <div class="col-10">
+                                    <img src="../Resources/Images/when-to-drink-water.jpg"
+                                         alt="Best time to drink water">
+                                </div>
+                            </row>
+                        </article>
+                    </div>
+                </section>
+                <footer><!--loaded footer from homepage--></footer>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Script section-->
+    <script>
+        //load navigation bar from homepage
+        $("header").load( "../index.html nav" );
+
+        //load footer from homepage
+        $("footer").load( "../index.html footer" );
+    </script>
+</body>
+</html>

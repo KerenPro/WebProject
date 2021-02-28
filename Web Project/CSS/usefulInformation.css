@@ -1,0 +1,180 @@
+/* General */
+* {
+    margin:0;
+    padding: 0;
+}
+
+.wrapper {
+    padding-bottom: 2.5rem;
+}
+.center {
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.section {
+    background-color: rgba(218, 235, 241, 0.5);
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.smallFont{
+    font-size: small;
+}
+
+/* Navigation bar*/
+.navstyle {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/*BMI Calculator */
+#bmi {
+    padding: 15px 10px;
+    width:100%;
+    margin-top: 10px;
+}
+
+.calculator {
+    display: inline;
+    float: left;
+    margin: 20px;
+}
+
+.bmiInfo {
+    display: inline-flex;
+}
+
+#bmiResults {
+    display: inline-flex;
+}
+
+/*Protein*/
+.table {
+   margin: 10px
+}
+
+.sourcesOfProtein img {
+    width: 45%;
+    opacity:75%;
+    float: right;
+    margin: 10px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.activityLevel p{
+    width:12em;
+}
+
+.proteinCalculator {
+    background-color: rgba(189, 226, 239, 0.5);
+    border-radius: 10px;
+    padding:10px;
+}
+
+#proteinResultsImg{
+    width: 100%;
+    opacity:75%;
+    height: auto;
+}
+
+#proteinResultsBg{
+}
+
+/*Water Intake*/
+#water {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#water img{
+    width: 100%;
+    opacity:75%;
+    height: auto;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+
+#waterCalculator{
+    display:inline-flex;
+}
+
+/* Media queries*/
+@media only screen and (max-width: 1205px){
+    #proteinResultsImg {
+        width:31em;
+    }
+    #water img{
+        visibility: hidden;
+    }
+
+}
+
+@media only screen and (max-width: 991px){
+    .section {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 985px){
+    #proteinResultsImg {
+        width:28em;
+    }
+}
+
+@media only screen and (max-width: 766px){
+    #proteinResultsImg {
+        width: 18em;
+    }
+}
+
+@media only screen and (max-width: 483px){
+    #proteinResultsImg {
+        width: 13em;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .calculator, #bmi, .bmiInfo, #bmiResults,#bmiForm, #proteinForm, .proteinResults, #waterCalculator {
+        display: block;
+        width: 100%;
+    }
+
+    #water img{
+
+    }
+    .col-12 {
+        width: 97%;
+        margin-left: 4px;
+    }
+    .sourcesOfProtein table {
+        width:318px;
+    }
+
+    .sourcesOfProtein p {
+        width: 21em;
+    }
+
+    .sourcesOfProtein img, #proteinResultsBg {
+        width:94%;
+    }
+
+    #proteinResultsP, #resultsActivity, #resultsGender, #resultsGoal, #resultsPregnant, #resultsWeightHeight{
+        width: 26em;
+    }
+
+    #proteinResultsImg{
+        width: 26em;
+    }
+
+}

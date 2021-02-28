@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+	<head>
+	 <meta charset="UTF-8">
+	  <!--making a responsive webpage-->
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	  
+	  <title>Workouts </title> 
+	
+	   <!--link Javascript-->
+	  <script src="../Javascript/workouts.js"></script>
+	  <!--jQuery import-->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  
+      <!--css stylesheet link-->
+      <link rel="stylesheet" type="text/css" href="../CSS/workoutPage.css">
+	  
+    <!--linking bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    </head>
+
+	
+	
+	<body>
+		<header>
+		<h1>Welcome to Workouts page</h1>
+		</header>
+		
+		<!--navigation bar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navstyle">
+                <div class="container-fluid">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <!--<li class="nav-item"><a class="nav-link" href="Includes/Web Project.html">Useful Information</a></li>-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Useful Information
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="/Includes/usefulInformation.html#bmi">BMI Calculator</a></li>
+                                <li><a class="dropdown-item" href="/Includes/usefulInformation.html#protein">Protein info & Calculator</a></li>
+                                <li><a class="dropdown-item" href="/Includes/usefulInformation.html#water">Water Intake Calculator</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="workoutsPage.html">Workouts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/Includes/nutrition.php">Food & Diet</a></li>
+                    </ul>
+                </div>
+            </nav>
+		
+		<!--main section of the Workout Preferences page-->
+		<main>
+			<section class="intro" id="choose">
+				<h3 id="start"> Only ONE step to start your workout </h3> 
+			
+		
+			<article class="intro2">
+			<h4 id = "start2"> Choose your preferences: </h4>
+			
+			
+			<!--preferences form-->
+			<article class="prefer">
+				<form name="workout" id="workoutFormId" class="workoutFormClass" >
+				    <fieldset class="preferences">
+					<legend > <b> Muscle group</b> </legend> 
+						<div class="custom-control custom-radio">
+						<input type="radio" id="legsRadio" name="customRadio" class="custom-control-input">
+						<label class="custom-control-label" for="legsRadio">Legs</label>
+						</div>
+						<div class="custom-control custom-radio">
+						<input type="radio" id="absRadio" name="customRadio" class="custom-control-input">
+						<label class="custom-control-label" for="absRadio">ABS</label>
+						</div>
+					</fieldset><br>
+					
+					<fieldset class="preferences">
+					<legend ><b>  Difficulty level</b> </legend> 
+						<div class="custom-control custom-radio">
+						<input type="radio" id="easyRadio" name="customRadio2" class="custom-control-input2">
+						<label class="custom-control-label" for="easyRadio">Easy</label>
+						</div>
+						<div class="custom-control custom-radio">
+						<input type="radio" id="mediumRadio" name="customRadio2" class="custom-control-input2">
+						<label class="custom-control-label" for="mediumRadio">Medium</label>
+						</div>
+						<div class="custom-control custom-radio">
+						<input type="radio" id="hardRadio" name="customRadio2" class="custom-control-input2">
+						<label class="custom-control-label" for="hardRadio">Hard</label>
+						</div>
+					</fieldset><br>
+					
+					<input type="button" class="submit1" onclick="showRelevantWorkout()" value="Let's Begin!">
+					
+				</form>
+				</article>
+			</article>
+			</section>
+			
+			<!--video category---->
+			<section class="workouts-videos" id="videos" style="display:none">
+			<h3 class="labelForVideo">Your Workout</h3>
+			
+				<!-- abs video ---->
+				<article class="abs"  >
+				
+					<div id="abs-easy" style="display: none" >
+					<p><b>Lets begin Easy level ABS workout!</p>
+					<iframe  width="450" height="315" src="https://www.youtube.com/embed/svdPTfOpAyQ" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div id="abs-medium" style="display: none">
+					<p><b>Lets begin Medium level ABS workout!</p>
+					<iframe width="450" height="315" src="https://www.youtube.com/embed/Goo0g_zmFBY" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+					<div id="abs-hard" style="display: none">
+					<p><b>Lets begin Hard level ABS workout!</p>
+					<iframe width="450" height="315" src="https://www.youtube.com/embed/EfJ4aB_enVE" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+		
+			
+				</article>
+				
+				<!-- legs video ---->
+				<article class="legs">
+				<div class="legs-part">
+					<div id="legs-easy" style="display: none">
+					<p><b>Lets begin Easy level Legs workout!</p>
+					<iframe width="450" height="315" src="https://www.youtube.com/embed/nG69wuXHwxg" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div> 
+					<div id="legs-medium" style="display: none">
+					<p><b>Lets begin Medium level Legs workout!</p>
+					<iframe width="450" height="315" src="https://www.youtube.com/embed/nSECUu4VFOc" frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div> 
+					<div id="legs-hard" style="display: none">
+					<p><b>Lets begin Hard level Legs workout!</p>
+					<iframe width="450" height="315" src="https://www.youtube.com/embed/B0JX2JsM37Y" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div> 
+				</div>
+		
+				</article>
+			
+			</section>
+			
+			<section id="last-section">
+				
+				<article class="rules" id="abs-rules" style="display: none"  >
+						<h4 id="rules-abs-lable"><b>Some rules you need to remember about ABS workout</b></h4>
+					<div id="rules-border">
+						<br>
+						<p>1. Never do crunches</p>
+						<p>2. Don’t work your abs every day</p>
+						<p>3. Planks are king</p>
+						<p>4. Add extra resistance</p>
+						<p>5. Do your reps quickly for the most burn</p>
+						<p>6. Do your ab training first, and then cardio after</p>
+						<p>7. Breathe through the exercises</p>
+					</div>
+						<img src="../Resources/Images/Muscles-wall.jpg" alt="ABS Muscles">
+				</article>
+				
+				<article class="rules" id="legs-rules" style="display: none" >
+					
+					<h4 id="rules-legs-lable"><b>Some rules you need to remember about Legs workout</b></h4>
+					<div id="rules-border">
+						<br>
+						<p>1. Attack Legs As A Weak Point</p>
+						<p>2. Start With Squats. Period.</p>
+						<p>3. Go Deep</p>
+						<p>4. Change Up Your Foot Position</p>
+						<p>5. Use High And Low Foot Placements</p>
+						<p>6. Focus On Your Quads</p>
+						<p>8. Split Your Leg Workout</p>
+					</div>	
+						<img src="../Resources/Images/legs_muscles.jpg" alt="Legs Muscles">
+				
+				</article>
+				
+				<article id="change-workout" style="display: none"  >
+				<p id="change-workout-lable">Want to change workout? Press the button "Change Workout". </p>
+				 <input type="button" class="change-button" onclick="resetForm()" value ="Change Workout">
+				 
+				</article>
+			</section> 
+			
+		</main>
+			
+		<!--footer element-->		
+	  <footer class="footer">
+        <p class="text-center mt-3">©2021 Jenia Bartal, Keren Abramson, Ilia Shifrin</p>
+        </footer>
+		
+		<!--JQuery -->
+	<script>
+		<!-- JS allert-->
+		window.alert("Hello dear visitor,you about to start your workout. Good luck!");
+		
+		<!--JQuery Allerts for medium and hard level radio buttons-->
+		$(document).ready(function(){
+			$("#mediumRadio").click(function(){
+			window.alert("If you are a beginner, we recommended to start from the Easy level");
+			})
+			$("#hardRadio").click(function(){
+			window.alert("If you are a beginner, we recommended to start from the Easy level");
+			})
+		<!-- validate radio buttons select-->
+		    $('.submit1').click(function(){ //after pressing a begin button
+			var check = true;
+				$("input:radio").each(function(){
+				var name = $(this).attr("name");
+				if($("input:radio[name="+name+"]:checked").length == 0){
+                check = false;
+				}
+			});
+			if(!check){ //if not all selected output alert 
+			alert('Please select one option in each category.');
+			}else{ // if all selected 
+			<!--slideUP preferences after choose workout corect - JQUery plugin -->
+				$(".intro").slideUp();
+			<!--slideDown change workout option after choose workout corect - JQUery plugin -->	
+				$("#change-workout").slideDown();
+			}
+			});	
+			<!--scroll to top  JQUERY plugin-->	
+			 $(".submit1").click(function() {
+				$("html, body").animate({ 
+					scrollTop: 0 
+					}, "slow");
+			return false;
+			});
+			
+			
+		});
+	
+	</script>
+	
+
+		
+		
+	</body>
+
+</html>

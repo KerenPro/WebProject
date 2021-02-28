@@ -1,0 +1,167 @@
+/* General */
+* {
+    margin:0;
+    padding: 0;
+}
+
+.wrapper {
+    padding-bottom: 2.5rem;
+}
+.center {
+    margin: 0 auto;
+    width: 50%;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.section {
+    background-color: #daebf1;
+    border-radius: 10px;
+    width: 100%;
+    height: 98%;
+    margin-top: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+/* Header */
+header img {
+    width: 100%;
+    height: auto;
+}
+
+/* Navigation bar */
+.navstyle {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+/* Intro */
+.intro {
+    background-color: #deeaee;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.intro img {
+    margin: auto;
+    padding: 10px;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: 800px;
+    border-radius: 10%;
+}
+
+.quote {
+    font-family: 'Comic Neue', cursive, sans-serif;+
+    font-style: italic;
+}
+
+/*Diet Tip*/
+.banana {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#bananaBenefits{
+    display: inline-block;
+}
+
+#bananaBenefits img {
+    width:100%;
+    height: auto;
+    border-radius: 20px;
+    margin: 15px 15px;
+    opacity: 77%;
+}
+#bananaSmoothie {
+    display: inline-block;
+    margin-left: 28px;
+    padding: 10px;
+    background-color: rgba(175, 221, 236, 0.2) ;
+    border-radius: 20px;
+    width: 50%;
+}
+
+#bananaSmoothie h3{
+    text-align: center;
+}
+
+/* Fitness Tip, mental health tip */
+.cardio, .meditation {
+    display: flex;
+    align-items: flex-start;
+    padding: 5px 15px;
+}
+
+.cardio img , .meditation img{
+    border-radius: 20px;
+    opacity: 75%;
+    width: 30%;
+    height: auto;
+}
+
+.considerCardio, .relaxation{
+    display: inline-block;
+    padding: 10px;
+    background-color: rgba(175, 221, 236, 0.2) ;
+    border-radius: 20px;
+}
+
+/* Footer */
+footer {
+    bottom:0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1400px){
+    * {
+        font-size: small;
+    }
+    #bananaBenefits img {
+        width: 100%;
+    }
+    #bananaSmoothie {
+        width: 100%;
+    }
+    iframe {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    #bananaBenefits img {
+        width: 95%;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .intro {
+        font-size: small;
+    }
+
+    .cardio, .meditation{
+        flex-wrap: wrap;
+    }
+
+    .cardio img , .meditation img{
+        width: 100%;
+    }
+}
